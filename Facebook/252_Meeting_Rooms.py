@@ -11,6 +11,10 @@ Approach
 ===========
 0. Sort the array by start time
 1. scan through the array and terminate if we see any comflict
+
+Complexity
+===========
+O(N)
 """
 # Definition for an interval.
 # class Interval(object):
@@ -18,7 +22,9 @@ Approach
 #         self.start = s
 #         self.end = e
 
+
 class Solution(object):
+
     def canAttendMeetings(self, intervals):
         """
         :type intervals: List[Interval]
@@ -29,8 +35,7 @@ class Solution(object):
         intervals = sorted(intervals, key=sorter)
         # for interval in sorted_starting_time:
         #     print interval.start, interval.end
-        for i in xrange(len(intervals)-1):
-            if intervals[i].end > intervals[i+1].start:
+        for i in xrange(len(intervals) - 1):
+            if intervals[i].end > intervals[i + 1].start:
                 return False
         return True
-        
