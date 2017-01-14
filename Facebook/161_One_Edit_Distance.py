@@ -14,6 +14,10 @@ and determine if they differ by exactly one letter.
 In this problem deletion and insertion can be thought of as the same thing.
 Determine the smaller of the two strings. Looping according to the shorter one,
 at index i, determine if short[i:] == long[i+1:].
+
+Complexity
+__________
+O(n)
 """
 
 
