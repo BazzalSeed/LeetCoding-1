@@ -29,6 +29,10 @@ For this problem the following relationship was utilized:
 Sum[j] - Sum[i] + nums[j] = k
 
 This algorithm can be done in a single pass if we calculate the sum as we go.
+
+Complexity
+----------
+O(N)
 """
 
 
