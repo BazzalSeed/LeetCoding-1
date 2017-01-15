@@ -1,2 +1,1 @@
-# 311	Sparse Matrix Multiplication 	50.6%	Medium
-# 314	Binary Tree Vertical Order Traversal
+301. Remove Invalid Parentheses https://leetcode.com/problems/remove-invalid-parentheses/

@@ -53,6 +53,11 @@ D(i,j) = min (
 )
 
 
+Complexity
+_____________________
+Space: m*n
+Time : O(m*n)
+
 """
 
 
