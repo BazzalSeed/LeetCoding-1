@@ -17,7 +17,8 @@ at index i, determine if short[i:] == long[i+1:].
 
 Complexity
 __________
-O(n)
+Time - O(n)
+Space - O(1)
 """
 
 

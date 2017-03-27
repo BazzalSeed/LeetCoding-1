@@ -14,7 +14,8 @@ Approach
 
 Complexity
 ===========
-O(N)
+Time - O(N.Lg(N))
+Space - O(1)
 """
 # Definition for an interval.
 # class Interval(object):

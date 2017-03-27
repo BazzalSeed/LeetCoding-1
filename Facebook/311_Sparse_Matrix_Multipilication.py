@@ -27,6 +27,11 @@ AB = | -1 0 3 | x | 0 0 0 | = | -7 0 3 |
 Approach
 _______________
 very naive. Just avoid calculation when A[i][j] or B[j][k] is zero
+
+Complexity
+____________
+Time - (A*B*C)
+Space - (A*C)
 """
 
 

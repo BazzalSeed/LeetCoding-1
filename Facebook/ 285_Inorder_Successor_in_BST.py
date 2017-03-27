@@ -26,8 +26,10 @@ There are two situations that can occur in this problem.
 
 Complexity
 __________
+H - Lg(N) when balanced
+Time - O(H)
+Space - O(1)
 
-For a balanced tree O(lg(n)), unbalanced O(H)
 """
 
 # Definition for a binary tree node.

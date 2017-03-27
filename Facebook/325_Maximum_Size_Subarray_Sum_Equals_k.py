@@ -32,11 +32,13 @@ This algorithm can be done in a single pass if we calculate the sum as we go.
 
 Complexity
 ----------
-O(N)
+Time - O(N)
+Space - O(N)
 """
 
 
 class Solution(object):
+
     def maxSubArrayLen(self, nums, k):
         """
         :type nums: List[int]
@@ -49,11 +51,11 @@ class Solution(object):
         # Sum[j] - Sum[i] + nums[j] = k
         sum_index_map = {}
         sum_index_map[0] = 0
-        for i in range(1, len(nums)+1):
-            sum += nums[i-1]
+        for i in range(1, len(nums) + 1):
+            sum += nums[i - 1]
             seek = sum - k
             if seek in sum_index_map:
-                maximum = max(maximum, i-sum_index_map[seek])
+                maximum = max(maximum, i - sum_index_map[seek])
             if sum not in sum_index_map:
                 sum_index_map[sum] = i
 

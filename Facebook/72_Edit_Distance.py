@@ -69,19 +69,20 @@ class Solution(object):
         :type word2: str
         :rtype: int
         """
-        n = len(word2) + 1
         m = len(word1) + 1
-        edit = [[0 for _ in xrange(n)] for _ in xrange(m)]
+        n = len(word2) + 1
+        DP = [[0 for _ in range(n)]for _ in xrange(m)]
+
         for i in xrange(m):
             for j in xrange(n):
                 if i == 0:
-                    edit[i][j] = j
+                    DP[i][j] = j
                 elif j == 0:
-                    edit[i][j] = i
+                    DP[i][j] = i
                 else:
                     if word1[i - 1] == word2[j - 1]:
                         cost = 0
                     else:
                         cost = 1
-                    edit[i][j] = min(edit[i - 1][j] + 1, edit[i][j - 1] + 1, edit[i - 1][j - 1] + cost)
-        return edit[m - 1][n - 1]
+                    DP[i][j] = min(DP[i - 1][j] + 1, DP[i][j - 1] + 1, DP[i - 1][j - 1] + cost)
+        return DP[m - 1][n - 1]

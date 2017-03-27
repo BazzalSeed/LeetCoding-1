@@ -10,6 +10,26 @@ Another example is ")()())", where the longest valid parentheses substring is "(
 
 Approach
 ___________
+stack
++++++
+maintain
+start - start of most recent longest valid consecutive matched parentheses (inclusive)
+maxLen - maximum length of valid consecutive matched parentheses
+Loop through the string
+1. when see '(', append the INDEX to the stack
+2. when see ')'
+    a. if len(stack) == 0, this means no match, we can skip this one by start = i + 1
+    b. else: pop one off the stack. after that
+        if len(stack) == 0, it means we have finished a set of match
+            maxlen = max(maxlen, i - start + 1)
+        else:
+            maxlen = max(maxlen, i - stack[-1]) ( since poped one off, the top is one before the match)
+return maxlen
+
+Complexity
+_____________
+Time - O(N)
+Space - O(N)
 """
 
 
@@ -28,6 +48,8 @@ class Solution(object):
                 stack.append(i)
             else:
                 if len(stack) == 0:
+                    # has to do this instaed tof start = i becasue
+                    # the LVP might start at 0
                     start = i + 1
                 else:
                     stack.pop()

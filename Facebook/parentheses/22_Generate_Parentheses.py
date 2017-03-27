@@ -1,6 +1,24 @@
 """
+Description
+_________________
 Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 For example, given n = 3, a solution set is:
+
+Approach
+__________________
+dfs
++++
+
+
+Complexity
+__________________
+Connecting point at
+add in ')' if exceesive '(' is present
+
+Complexity
+_____________
+Time - N!
+Space - O(N)
 """
 
 
